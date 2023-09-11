@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 195vh;
+            height: 15vh;
+            background-color: green;
+            padding: 5vh;
+            text-align: center;
+        }
+        .sectionOne{
+            height: 75vh;
+            width: 195vh;
+            background-color: aliceblue;
+            padding: 5vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vue Test</h1>
+    </header>
+
+    <section class="sectionOne">
+        <h3>Hallo</h3>
+        <br>
+        <hr>
+        <br>
+        <p>Lorem Ipsum</p>
+        <br>
+        <hr>
+        <br>
+        <p>{{ zahl }}</p>
+        <button @click="addNumber(1)">+1</button>
+        <button @click="addNumber(4)">+4</button>
+        <button @click="addNumber(7)">+7</button>
+        <br>
+        <hr>
+        <br>
+        <ol>
+            <li v-for="x in myArray"> {{ x }}</li>
+        </ol>
+    </section>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+              return {
+                message: "Hello World!"
+              }
+            }
+          })
+        
+         app.mount('#app')
+    </script>
+
+</body>
+</html>
